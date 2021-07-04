@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue - Home</title>
+
+    <link rel="stylesheet" href="index.js">
+
+    <!-- versão de desenvolvimento, inclui avisos úteis no console  -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+<div id="app-7">
+    <ol>
+        <!--
+        Agora provemos cada todo-item com o objeto todo que ele
+        representa, de forma que seu conteúdo possa ser dinâmico.
+        Também precisamos prover cada componente com uma "chave",
+        a qual será explicada posteriormente.
+        -->
+        <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id"></todo-item>
+    </ol>
+</div>
+
+<script src="index.js"></script>
+</body>
+
+</html>
